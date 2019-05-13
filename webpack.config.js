@@ -27,7 +27,7 @@ module.exports = {
     __dirname: true,
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [ '.tsx', '.ts', '.js', '.json' ]
   },
   plugins: [
   ],
