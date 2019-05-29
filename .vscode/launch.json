@@ -30,7 +30,7 @@
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "outFiles": [ "${workspaceFolder}/dist/*.compiled*" ],
+      "outFiles": [ "${workspaceFolder}/dist/tests.compiled*" ],
       "skipFiles": [
         "<node_internals>/**",
         "node_modules/**",
