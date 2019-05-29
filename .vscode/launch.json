@@ -1,0 +1,40 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "sourceMaps": true,
+      "name": "launch app",
+      "program": "${workspaceFolder}/dist/app.compiled.js",
+      "outFiles": [ "${workspaceFolder}/dist/app.compiled*" ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**",
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "sourceMaps": true,
+      "name": "test suite",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "--timeout",
+        "999999",
+        "--colors",
+        "${workspaceFolder}/dist/tests.compiled.js"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "outFiles": [ "${workspaceFolder}/dist/*.compiled*" ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**",
+      ]
+    }
+  ]
+}
