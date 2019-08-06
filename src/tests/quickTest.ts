@@ -1,14 +1,13 @@
 import * as assert from 'assert';
 
-describe('just some quick test', function() {
+declare const describe: Mocha.SuiteFunction;
+declare const it: Mocha.TestFunction;
 
-  it('should be green', async function () {
-    
-    let lengthEqualsFour = 'some'.length === 4;
+describe('just some quick test', () => {
+  it('should be green', async () => {
+    const lengthEqualsFour = 'some'.length === 4;
     assert(lengthEqualsFour, 'The length should indeed be 4');
-
   });
-
 });
 
 export default false;
