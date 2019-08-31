@@ -1,13 +1,6 @@
-import * as assert from 'assert';
+import { assert } from 'chai';
 
-declare const describe: Mocha.SuiteFunction;
-declare const it: Mocha.TestFunction;
-
-describe('just some quick test', () => {
-  it('should be green', async () => {
-    const lengthEqualsFour = 'some'.length === 4;
-    assert(lengthEqualsFour, 'The length should indeed be 4');
-  });
-});
-
-export default false;
+export default async function quickTest() {
+  this.timeout(0);
+  assert.strictEqual('huhu'.length, 4, 'The length should be four');
+}

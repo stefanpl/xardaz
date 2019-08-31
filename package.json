@@ -9,7 +9,8 @@
     "development": "NODE_ENV=development npx webpack --mode=development",
     "watch": "NODE_ENV=development npx webpack --mode=development --watch",
     "production": "NODE_ENV=production npx webpack --mode=production",
-    "test": "NODE_ENV=testing npx mocha dist/tests.compiled.js"
+    "test": "NODE_ENV=testing npx mocha dist/tests.compiled.js",
+    "quick-test": "RUN_QUICK_TEST=yeas NODE_ENV=testing npx mocha dist/tests.compiled.js"
   },
   "author": "spl",
   "license": "ISC",

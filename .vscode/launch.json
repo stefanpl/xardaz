@@ -35,6 +35,29 @@
         "<node_internals>/**",
         "node_modules/**",
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "sourceMaps": true,
+      "name": "quick test",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "--timeout",
+        "999999",
+        "--colors",
+        "${workspaceFolder}/dist/tests.compiled.js"
+      ],
+      "console": "integratedTerminal",
+      "env": {
+        "RUN_QUICK_TEST": "yes please",
+      },
+      "internalConsoleOptions": "neverOpen",
+      "outFiles": [ "${workspaceFolder}/dist/tests.compiled*" ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**",
+      ]
     }
   ]
 }
