@@ -2,8 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: './src/_app.ts',
-    tests: './src/tests/_testSuite.ts',
+    tests: './tests/_testSuite.ts',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -38,8 +37,7 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],
   },
-  plugins: [
-  ],
+  plugins: [],
   target: 'node',
   devtool: 'source-map',
 };

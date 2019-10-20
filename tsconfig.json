@@ -1,17 +1,15 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "*": ["types/*"]
-    },
-    "outDir": "./dist/",
+    "outDir": "./dist",
     "noImplicitAny": false,
     "strictNullChecks": true,
     "lib": ["es2016"],
     "module": "es6",
     "moduleResolution": "node",
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
     "target": "es6",
-  }
+  },
+  "files": ["src/index.ts"]
 }

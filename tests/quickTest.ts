@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from 'chai'; // eslint-disable-line
 
 export default async function quickTest() {
   this.timeout(0);
