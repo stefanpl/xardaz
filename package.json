@@ -2,7 +2,8 @@
   "name": "xardas",
   "version": "0.0.1",
   "description": "A collection javascript utilities",
-  "main": "index.js",
+  "main": "dist/app.compiled.js",
+  "types": "dist/_app.d.ts",
   "scripts": {
     "dev": "npm run development",
     "prod": "npm run production",
