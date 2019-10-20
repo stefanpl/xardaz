@@ -1,7 +1,7 @@
 {
-  "name": "typescript-node-project",
+  "name": "xardas",
   "version": "0.0.1",
-  "description": "A boilerplate to start a typescript node project",
+  "description": "A collection javascript utilities",
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",
@@ -12,6 +12,15 @@
     "test": "NODE_ENV=testing npx mocha dist/tests.compiled.js",
     "quick-test": "RUN_QUICK_TEST=yeas NODE_ENV=testing npx mocha dist/tests.compiled.js"
   },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "utils",
+    "utilities",
+    "helpers",
+    "collection",
+    "xardas"
+  ],
   "author": "spl",
   "license": "ISC",
   "devDependencies": {
