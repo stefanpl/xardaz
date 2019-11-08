@@ -3,11 +3,11 @@ import { promisify } from 'util';
 import { AbsolutePath } from './types';
 
 const writeFilePromised = promisify(writeFile);
-const readdirPromised = promisify(readdir);
+export const readdirPromised = promisify(readdir);
 
 export function writeUtf8File(
   file: AbsolutePath,
-  contents: string,
+  contents: string = '',
   options: WriteFileOptions = {}
 ): Promise<void> {
   const defaultOptions: WriteFileOptions = {

@@ -1,4 +1,5 @@
 import quickTest from './quickTest';
+import './findFilesInDirectory.test';
 import '../src/index';
 
 declare const it: Mocha.TestFunction;
