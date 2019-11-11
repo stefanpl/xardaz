@@ -1,7 +1,7 @@
 import { dir as createTmpDir } from 'tmp-promise';
 import { join } from 'path';
 import { AbsolutePath } from '../../src/types';
-import { mkdirAsync, writeUtf8File } from '../../src/fileSystem';
+import { mkdirAsync, writeFileAsync } from '../../src/fileSystem';
 
 // TODO: Would be awesome if this function could parse a tree structure like this.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -37,6 +37,6 @@ export async function createTestingDirectory(): Promise<AbsolutePath> {
     const folder = foldersToCreate[index];
     await mkdirAsync(folder); // eslint-disable-line
   }
-  await Promise.all(filesToCreate.map(file => writeUtf8File(file)));
+  await Promise.all(filesToCreate.map(file => writeFileAsync(file)));
   return testDir;
 }
