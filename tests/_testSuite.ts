@@ -1,6 +1,7 @@
 import quickTest from './quickTest';
 import './findFilesInDirectory.test';
 import './validateDataAgainstJsonSchema.test';
+import './mustThrow.test';
 import '../src/index';
 
 declare const it: Mocha.TestFunction;

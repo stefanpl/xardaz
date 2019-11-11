@@ -1,5 +1,6 @@
 import { JSONSchema7 } from 'json-schema';
-import Ajv, { ErrorObject } from 'ajv';
+import { ErrorObject } from 'ajv'; // eslint-disable-line
+import * as Ajv from 'ajv'; // eslint-disable-line
 
 interface JSONSchemaValidationResult {
   isValid: boolean;
