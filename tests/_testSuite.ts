@@ -3,6 +3,7 @@ import './findFilesInDirectory.test';
 import './validateDataAgainstJsonSchema.test';
 import './mustThrow.test';
 import './isValidJsonSchema.test';
+import './buildUrl.test';
 import '../src/index';
 
 declare const it: Mocha.TestFunction;
