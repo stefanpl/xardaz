@@ -5,3 +5,4 @@ export * from './findFilesInDirectory';
 export * from './mustThrow';
 export * from './validateDataAgainstJsonSchema';
 export * from './isValidJsonSchema';
+export * from './buildUrl';
