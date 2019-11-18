@@ -1,5 +1,5 @@
 export * from './fileSystem';
-export * from './asyncHelpers';
+export * from './waitSomeTime';
 export * from './types';
 export * from './findFilesInDirectory';
 export * from './mustThrow';
