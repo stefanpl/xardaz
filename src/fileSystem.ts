@@ -14,7 +14,7 @@ export function writeFileAsync(
   const defaultOptions = {
     encoding: 'utf8',
   };
-  const optionsToUse = Object.assign(options, defaultOptions);
+  const optionsToUse = Object.assign(defaultOptions, options);
   return writeFilePromised(file, contents, optionsToUse);
 }
 
@@ -25,7 +25,7 @@ export function readFileAsync(
   const defaultOptions: WriteFileOptions = {
     encoding: 'utf8',
   };
-  const optionsToUse = Object.assign(options, defaultOptions);
+  const optionsToUse = Object.assign(defaultOptions, options);
   return readFilePromised(file, optionsToUse);
 }
 
