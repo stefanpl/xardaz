@@ -6,3 +6,4 @@ export * from './mustThrow';
 export * from './validateDataAgainstJsonSchema';
 export * from './isValidJsonSchema';
 export * from './buildUrl';
+export * from './readCsvFile';

@@ -4,6 +4,7 @@ import './validateDataAgainstJsonSchema.test';
 import './mustThrow.test';
 import './isValidJsonSchema.test';
 import './buildUrl.test';
+import './readCsvFile.test';
 import '../src/index';
 
 declare const it: Mocha.TestFunction;
