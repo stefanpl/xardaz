@@ -7,6 +7,7 @@ import { mkdirAsync, writeFileAsync } from '../../src/fileSystem';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const structure = `
 photos
+├── some.jpg
 ├── summer
 │   └── june
 │       └── windsurf.jpg
@@ -27,6 +28,7 @@ export async function createTestingDirectory(): Promise<AbsolutePath> {
     join(testDir, 'photos', 'winter', 'january'),
   ];
   const filesToCreate = [
+    join(foldersToCreate[0], 'some.jpg'),
     join(foldersToCreate[2], 'windsurf.jpg'),
     join(foldersToCreate[4], 'ski.png'),
     join(foldersToCreate[4], 'snow.png'),

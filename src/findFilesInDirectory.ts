@@ -1,4 +1,5 @@
 import * as recursiveReaddir from 'recursive-readdir';
+import { resolve } from 'path';
 import { readdirPromised } from './fileSystem';
 import { AbsolutePath } from './types';
 
@@ -13,8 +14,10 @@ export async function findFilesInDirectory(
   if (glob !== '*') {
     throw Error(`'glob' parameter not yet implmeneted!`);
   }
-  const files = await (searchRecursively
-    ? readdirPromised(path)
-    : recursiveReaddir(path));
-  return files;
+  if (searchRecursively) {
+    return recursiveReaddir(path);
+  }
+  return (await readdirPromised(path, { withFileTypes: true }))
+    .filter(entry => entry.isFile())
+    .map(entry => resolve(path, entry.name));
 }
