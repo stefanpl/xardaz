@@ -1,10 +1,18 @@
-import { WriteFileOptions, writeFile, readdir, mkdir, readFile } from 'fs';
+import {
+  WriteFileOptions,
+  writeFile,
+  readdir,
+  mkdir,
+  readFile,
+  stat,
+} from 'fs';
 import { promisify } from 'util';
 import { AbsolutePath } from './types';
 
 const writeFilePromised = promisify(writeFile);
 const readFilePromised = promisify(readFile);
 export const readdirPromised = promisify(readdir);
+export const statAsync = promisify(stat);
 
 export function writeFileAsync(
   file: AbsolutePath,

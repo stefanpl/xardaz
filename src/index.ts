@@ -1,3 +1,4 @@
+export * from './aliases';
 export * from './fileSystem';
 export * from './waitSomeTime';
 export * from './types';
@@ -8,3 +9,4 @@ export * from './isValidJsonSchema';
 export * from './buildUrl';
 export * from './readCsvFile';
 export * from './writeCsvFile';
+export * from './directoryExists';

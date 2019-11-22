@@ -50,6 +50,7 @@
     "eslint-plugin-import": "^2.18.2",
     "json-schema": "^0.2.5",
     "recursive-readdir": "^2.2.2",
+    "tempy": "^0.3.0",
     "tmp-promise": "^2.0.2",
     "url-join": "^4.0.1"
   }

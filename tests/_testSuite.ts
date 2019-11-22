@@ -6,6 +6,7 @@ import './isValidJsonSchema.test';
 import './buildUrl.test';
 import './readCsvFile.test';
 import './writeCsvFile.test';
+import './directoryExists.test';
 import '../src/index';
 
 declare const it: Mocha.TestFunction;
