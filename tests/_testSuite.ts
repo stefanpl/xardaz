@@ -6,7 +6,7 @@ import './isValidJsonSchema.test';
 import './buildUrl.test';
 import './readCsvFile.test';
 import './writeCsvFile.test';
-import './executeInBatches.test';
+import './processInBatches.test';
 import './directoryExists.test';
 import '../src/index';
 

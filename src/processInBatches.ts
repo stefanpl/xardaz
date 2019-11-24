@@ -9,7 +9,7 @@
  * @return {Promise<Array>} List of results, ordered like the values array
  *
  */
-export async function executeInBatches<V, R>(
+export async function processInBatches<V, R>(
   values: Array<V>,
   executor: (value: V) => Promise<R>,
   batchSize: number

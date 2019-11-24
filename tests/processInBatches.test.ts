@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { executeInBatches } from '../src';
+import { processInBatches } from '../src/processInBatches';
 
 declare const describe: Mocha.SuiteFunction;
 declare const it: Mocha.TestFunction;
@@ -23,9 +23,9 @@ const someNumbers = Array.from(Array(100)).map(() =>
 
 const batchSize = 5;
 
-describe('execute in batches', () => {
+describe('process in batches', () => {
   it('should process all functions', async () => {
-    const results = await executeInBatches(
+    const results = await processInBatches(
       someNumbers,
       number => asyncDouble(number),
       batchSize
@@ -41,7 +41,7 @@ describe('execute in batches', () => {
   });
   it('processes one batch after another', async () => {
     processedNumbers.length = 0;
-    await executeInBatches(
+    await processInBatches(
       someNumbers,
       number => asyncDouble(number),
       batchSize

@@ -10,4 +10,4 @@ export * from './buildUrl';
 export * from './readCsvFile';
 export * from './writeCsvFile';
 export * from './directoryExists';
-export * from './executeInBatches';
+export * from './processInBatches';
