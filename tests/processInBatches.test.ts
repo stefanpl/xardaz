@@ -1,49 +1,26 @@
 import { assert } from 'chai';
 import { processInBatches } from '../src/processInBatches';
+import { asyncDouble } from './helpers/asyncDouble';
+import { testProcessingFunction } from './helpers/testProcessingFunction';
+import { randomInt } from '../src/aliases';
 
 declare const describe: Mocha.SuiteFunction;
 declare const it: Mocha.TestFunction;
-
-const processedNumbers: Array<number> = [];
-
-async function asyncDouble(val: number): Promise<number> {
-  return new Promise(resolve => {
-    // This will create the random ordering of items within batches.
-    const timeout = Math.round(Math.random() * 5);
-    setTimeout(() => {
-      processedNumbers.push(val);
-      resolve(val * 2);
-    }, timeout);
-  });
-}
-
-const someNumbers = Array.from(Array(100)).map(() =>
-  Math.round(Math.random() * 100)
-);
 
 const batchSize = 5;
 
 describe('process in batches', () => {
   it('should process all functions', async () => {
-    const results = await processInBatches(
-      someNumbers,
-      number => asyncDouble(number),
-      batchSize
-    );
-    results.forEach((result, index) => {
-      assert.strictEqual(result, someNumbers[index] * 2);
+    await testProcessingFunction((numbers, executor) => {
+      return processInBatches(numbers, executor, batchSize);
     });
-    assert.lengthOf(results, someNumbers.length);
-    assert.lengthOf(processedNumbers, someNumbers.length);
-    const origSum = someNumbers.reduce((acc, curr) => acc + curr);
-    const doubleSum = results.reduce((acc, curr) => acc + curr);
-    assert.strictEqual(doubleSum, origSum * 2);
   });
   it('processes one batch after another', async () => {
-    processedNumbers.length = 0;
+    const processedNumbers: Array<number> = [];
+    const someNumbers = Array.from(Array(100)).map(() => randomInt());
     await processInBatches(
       someNumbers,
-      number => asyncDouble(number),
+      number => asyncDouble(number, processedNumbers),
       batchSize
     );
     // We expect the items in each batch to be ordered randomly,

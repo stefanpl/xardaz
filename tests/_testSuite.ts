@@ -7,7 +7,12 @@ import './buildUrl.test';
 import './readCsvFile.test';
 import './writeCsvFile.test';
 import './processInBatches.test';
+import './processSequentially.test';
+import './processInParallel.test';
+import './randomIntFromInterval.test';
 import './directoryExists.test';
+import './waitAndBlockSync.test';
+import './mesasureExecutionTime.test';
 import '../src/index';
 
 declare const it: Mocha.TestFunction;

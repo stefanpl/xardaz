@@ -1,5 +1,5 @@
 /**
- * Process a list of values in batches through an executor function.
+ * Process a list of values in batches through an async executor function.
  * The values within each batch will be processed in parallel.
  * The batches are processed sequentially, one after another.
  *
