@@ -29,9 +29,6 @@ describe('process in parallel', () => {
       ),
       mesasureExecutionTime(() => processSequentially(numbers, executor)),
     ]);
-    console.log(
-      `${executionTimeParallel},${executionTimeBatched},${executionTimeSequential}`
-    );
     assert.isTrue(
       executionTimeParallel < executionTimeBatched,
       'Parallel execution should be faster than batched.'

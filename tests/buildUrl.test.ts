@@ -19,6 +19,11 @@ describe('build urls', () => {
     const joinedUrl = buildUrl(baseUrlWithoutSlash, pathWithoutSlash);
     assert.strictEqual(correctUrl, joinedUrl);
   });
+  it('converts numbers to strings', async () => {
+    const number = 123;
+    const joinedUrl = buildUrl(baseUrlWithSlash, number);
+    assert.strictEqual(joinedUrl, `${baseUrlWithSlash}${number}`);
+  });
 });
 
 export default false;
