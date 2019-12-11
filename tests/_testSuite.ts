@@ -13,6 +13,7 @@ import './randomIntFromInterval.test';
 import './directoryExists.test';
 import './waitAndBlockSync.test';
 import './mesasureExecutionTime.test';
+import './arrayFilterUnique.test';
 import '../src/index';
 
 declare const it: Mocha.TestFunction;

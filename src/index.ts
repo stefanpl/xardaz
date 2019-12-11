@@ -13,6 +13,7 @@ export * from './directoryExists';
 export * from './processInBatches';
 export * from './processSequentially';
 export * from './processInParallel';
+export * from './arrayFilterUnique';
 export * from './randomIntFromInterval';
 export * from './mesasureExecutionTime';
 export * from './waitAndBlockSync';
