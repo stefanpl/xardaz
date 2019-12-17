@@ -16,15 +16,16 @@ import { readFileAsync } from './fileSystem';
  */
 export async function readCsvFile(
   path: AbsolutePath,
-  fileContainsHeaderRow: boolean
+  fileContainsHeaderRow: boolean,
+  options?: parse.Options
 ): Promise<Array<Object | Array<any>>> {
   const input = await readFileAsync(path);
   return new Promise((fulfill, reject) => {
     parse(
       input,
-      {
+      Object.assign({}, options, {
         columns: fileContainsHeaderRow,
-      },
+      }),
       (err, output) => {
         if (err) {
           reject(err);
