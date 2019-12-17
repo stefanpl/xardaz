@@ -17,3 +17,4 @@ export * from './arrayFilterUnique';
 export * from './randomIntFromInterval';
 export * from './mesasureExecutionTime';
 export * from './waitAndBlockSync';
+export * from './downloadFile';

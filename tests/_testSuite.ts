@@ -12,6 +12,7 @@ import './processInParallel.test';
 import './randomIntFromInterval.test';
 import './directoryExists.test';
 import './waitAndBlockSync.test';
+import './downloadFile.test';
 import './mesasureExecutionTime.test';
 import './arrayFilterUnique.test';
 import '../src/index';
