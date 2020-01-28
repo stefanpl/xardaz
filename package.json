@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepublish": "npm run prod",
     "dev": "npm run development",
     "prod": "npm run production",
     "watch-tests": "NODE_ENV=development npx webpack --mode=development --watch",
