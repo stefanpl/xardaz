@@ -1,5 +1,5 @@
 {
-  "name": "xardas",
+  "name": "xardaz",
   "version": "0.0.1",
   "description": "A collection javascript utilities",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "utilities",
     "helpers",
     "collection",
-    "xardas"
+    "xardaz"
   ],
   "author": "spl",
   "license": "ISC",
